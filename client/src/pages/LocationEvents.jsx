@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import LocationsAPI from '../services/LocationsAPI'
 import Event from '../components/Event'
+import '../css/LocationEvents.css'
 
 const LocationEvents = ({index}) => {
     const [location, setLocation] = useState([])
@@ -31,11 +32,18 @@ const LocationEvents = ({index}) => {
     }, [])
 
     return (
-        <section>
+        <div className='location-events'>
             <header>
-                <h2>{location.name}</h2>
-                <p>{location.address}, {location.city}, {location.state} {location.zip}</p>
+                <div className='location-image'>
+                    <img src={location.image} />
+                </div>
+
+                <div className='location-info'>
+                    <h2>{location.name}</h2>
+                    <p>{location.address}, {location.city}, {location.state} {location.zip}</p>
+                </div>
             </header>
+
             <main>
                 {
                     events && events.length > 0 ? events.map((event, index) =>
@@ -47,10 +55,10 @@ const LocationEvents = ({index}) => {
                             time={event.time}
                             image={event.image}
                         />
-                    ) : <h2>{'No events scheduled at this location yet!'}</h2>
+                    ) : <h2><i className="fa-regular fa-calendar-xmark fa-shake"></i> {'No events scheduled at this location yet!'}</h2>
                 }
             </main>
-        </section>
+        </div>
     )
 }
 

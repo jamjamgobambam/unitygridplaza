@@ -25,10 +25,10 @@ const App = () => {
   ])
 
   return (
-    <div>
-      <header>
+    <div className='app'>
+      <header className='main-header'>
         <h1>UnityGrid Plaza</h1>
-        <Link to="/" role="button">Home</Link>
+        <Link to="/" role='button'>Home</Link>
       </header>
       
       <main>

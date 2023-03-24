@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import EventsAPI from '../services/EventsAPI'
 import dates from '../utilities/dates'
+import '../css/Event.css'
 
 const Event = (props) => {
 
@@ -32,9 +33,15 @@ const Event = (props) => {
     }, [event])
 
     return (
-        <article style={{background: `url(${event.image})`}}>
-            <h3>{event.title}</h3>
-            <p>{event.date}  |  {time}</p>
+        <article className='event-information'>
+            <img src={event.image} />
+
+            <div className='event-information-overlay'>
+                <div className='text'>
+                    <h3>{event.title}</h3>
+                    <p><i className="fa-regular fa-calendar fa-bounce"></i> {event.date} <br /> {time}</p>
+                </div>
+            </div>
         </article>
     )
 }
