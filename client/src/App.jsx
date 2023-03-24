@@ -30,6 +30,7 @@ const App = () => {
         <h1>UnityGrid Plaza</h1>
         <Link to="/" role="button">Home</Link>
       </header>
+      
       <main>
         {element}
       </main>

@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import '../css/Location.css'
 
 const Location = (props) => {
 
@@ -15,7 +16,7 @@ const Location = (props) => {
     }
 
     return (
-        <article onClick={handleClick}>
+        <article className='location-component' onClick={handleClick}>
             <h2>{props.name}</h2>
             <p>{props.address}, {props.city}, {props.state} {props.zip}</p>
         </article>

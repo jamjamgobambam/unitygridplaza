@@ -1,0 +1,8 @@
+section {
+    display: flex;
+    width: 80vw;
+    margin: 30px;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}

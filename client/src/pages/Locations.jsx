@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import LocationsAPI from '../services/LocationsAPI'
 import Location from '../components/Location'
+import '../css/Locations.css'
 
 const Locations = () => {
 

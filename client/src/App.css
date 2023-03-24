@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700;800;900&display=swap');
+
+#root {
+    background: url('./assets/background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    overflow-y: scroll;
+    font-family: Nunito Sans, Verdana, sans-serif;
+    --primary: rgb(217, 29, 242);
+    --primary-hover: rgb(111, 28, 166);
+    --primary-focus: rgb(217, 29, 242);
+    --secondary: rgb(4, 66, 191);
+    --secondary-hover: rgb(3, 1, 64);
+    --secondary-focus: rgb(111, 28, 166);
+}
+
+header {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#root h1 {
+    font-family: Rock Salt, cursive;
+    font-size: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 0px;
+    color: white;
+}
+
+#root main {
+    display: flex;
+    justify-content: center;
+}
+
+#root [role=button] {
+    text-transform: uppercase;
+    font-weight: 900;
+}
