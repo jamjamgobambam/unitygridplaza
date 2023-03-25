@@ -6,24 +6,22 @@
 }
 
 .first-location {
-    display: flex;
-    position: relative;
-    top: 25%;
+    position: absolute;
+    top: 5vh;
+    left: -9vw;
     cursor: pointer;
-    width: 30vw;
 }
 
 .second-location {
-    display: flex;
-    align-items: flex-end;
+    position: absolute;
+    top: -12.5vh;
+    left: 30vw;
     cursor: pointer;
-    width: 30vw;
 }
 
 .third-location {
-    display: flex;
-    position: relative;
-    top: 40%;
+    position: absolute;
+    top: 17vh;
+    left: 78vw;
     cursor: pointer;
-    width: 35vw;
 }

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import '../css/Location.css'
 
 const Location = (props) => {
@@ -19,7 +19,7 @@ const Location = (props) => {
         <div className='location-building-image' onClick={handleClick}>
             <img src={props.image} />
 
-            <div className='location-overlay'>
+            <div className={props.overlay}>
                 <button>{props.name}</button>
             </div>
         </div>

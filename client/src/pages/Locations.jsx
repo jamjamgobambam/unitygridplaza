@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import LocationsAPI from '../services/LocationsAPI'
 import Location from '../components/Location'
-import building1 from '../assets/building1.png'
-import building2 from '../assets/building2.png'
-import building3 from '../assets/building3.png'
+import venue1 from '../assets/venue1.png'
+import venue2 from '../assets/venue2.png'
+import venue3 from '../assets/venue3.png'
 import '../css/Locations.css'
 
 const Locations = () => {
@@ -31,15 +31,15 @@ const Locations = () => {
     return (
         <div className='available-locations'>
             <div className='first-location'>
-                <Location key={firstLocation.id} id={firstLocation.id} name={firstLocation.name} image={building3} />
+                <Location key={firstLocation.id} id={firstLocation.id} name={firstLocation.name} image={venue1} overlay='location-overlay' />
             </div>
 
             <div className='second-location'>
-                <Location key={secondLocation.id} id={secondLocation.id} name={secondLocation.name} image={building2} />
+                <Location key={secondLocation.id} id={secondLocation.id} name={secondLocation.name} image={venue2} overlay='location-overlay' />
             </div>
 
             <div className='third-location'>
-                <Location key={thirdLocation.id} id={thirdLocation.id} name={thirdLocation.name} image={building1} />
+                <Location key={thirdLocation.id} id={thirdLocation.id} name={thirdLocation.name} image={venue3} overlay='location-overlay-last' />
             </div>
         </div>
     )
