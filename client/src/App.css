@@ -6,10 +6,6 @@ header {
 }
 
 .main-header {
-    height: 40vh;
-    /* background: url('./assets/banner.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom center; */
+    height: 30vh;
     align-items: flex-end;
 }

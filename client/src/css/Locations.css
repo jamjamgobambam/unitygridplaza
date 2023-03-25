@@ -8,7 +8,7 @@
 .first-location {
     display: flex;
     position: relative;
-    top: 15%;
+    top: 25%;
     cursor: pointer;
     width: 30vw;
 }
@@ -23,7 +23,7 @@
 .third-location {
     display: flex;
     position: relative;
-    top: 30%;
+    top: 40%;
     cursor: pointer;
     width: 35vw;
 }
