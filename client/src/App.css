@@ -19,3 +19,14 @@ header {
     position: relative;
     z-index: 2;
 }
+
+.header-buttons {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.header-buttons button {
+    margin-right: 20px;
+    margin-left: 20px;
+}

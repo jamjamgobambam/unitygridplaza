@@ -2,6 +2,7 @@ import React from 'react'
 import { useRoutes, Link } from 'react-router-dom'
 import Locations from './pages/Locations'
 import LocationEvents from './pages/LocationEvents'
+import Events from './pages/Events'
 import './App.css'
 
 const App = () => {
@@ -21,6 +22,10 @@ const App = () => {
     {
       path: '/pavilion',
       element: <LocationEvents index={3} />
+    },
+    {
+      path: '/events',
+      element: <Events />
     }
   ])
 
@@ -28,7 +33,11 @@ const App = () => {
     <div className='app'>
       <header className='main-header'>
         <h1>UnityGrid Plaza</h1>
-        <Link to="/" role='button'>Home</Link>
+
+        <div className='header-buttons'>
+          <Link to='/' role='button'>Home</Link>
+          <Link to='/events' role='button'>Events</Link>
+        </div>
       </header>
       
       <main>
