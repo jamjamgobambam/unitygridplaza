@@ -16,10 +16,13 @@ const Location = (props) => {
     }
 
     return (
-        <article className='location-component' onClick={handleClick}>
-            <h2>{props.name}</h2>
-            <p>{props.address}, {props.city}, {props.state} {props.zip}</p>
-        </article>
+        <div className='location-building-image' onClick={handleClick}>
+            <img src={props.image} />
+
+            <div className='location-overlay'>
+                <button>{props.name}</button>
+            </div>
+        </div>
     )
 }
 

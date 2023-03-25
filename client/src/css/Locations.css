@@ -1,8 +1,29 @@
-section {
+.available-locations {
     display: flex;
-    width: 80vw;
-    margin: 30px;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.first-location {
+    display: flex;
+    position: relative;
+    top: 15%;
     cursor: pointer;
+    width: 30vw;
+}
+
+.second-location {
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    width: 30vw;
+}
+
+.third-location {
+    display: flex;
+    position: relative;
+    top: 30%;
+    cursor: pointer;
+    width: 35vw;
 }
