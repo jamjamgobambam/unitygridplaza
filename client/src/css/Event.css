@@ -1,8 +1,9 @@
 .event-information {
     position: relative;
-    width: 400px;
+    width: 350px;
+    height: 350px;
     padding: 0px;
-    margin: 30px;
+    margin: 20px;
     border: 2px solid white;
     border-radius: 0px;
 }
