@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import EventsAPI from '../services/EventsAPI'
+import LocationButtons from '../components/LocationButtons'
 import Event from '../components/Event'
 import '../css/Events.css'
 import '../css/Event.css'
@@ -22,6 +23,8 @@ const Events = () => {
 
     return (
         <div className='all-events'>
+            <LocationButtons />
+
             {
                 events && events.length > 0 ? events.map((event, index) =>
                     <Event
