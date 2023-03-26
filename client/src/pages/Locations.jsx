@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import LocationsAPI from '../services/LocationsAPI'
 import unitygrid from '../assets/unitygrid.jpg'
 import '../css/Locations.css'
