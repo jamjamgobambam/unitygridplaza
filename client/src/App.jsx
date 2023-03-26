@@ -24,6 +24,10 @@ const App = () => {
       element: <LocationEvents index={3} />
     },
     {
+      path: '/americanairlines',
+      element: <LocationEvents index={4} />
+    },
+    {
       path: '/events',
       element: <Events />
     }
