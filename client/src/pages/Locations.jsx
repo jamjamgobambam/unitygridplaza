@@ -30,16 +30,23 @@ const Locations = () => {
 
     return (
         <div className='available-locations'>
+            <Location key={firstLocation.id} id={firstLocation.id} name={firstLocation.name} overlay='location-overlay' />
+            <Location key={secondLocation.id} id={secondLocation.id} name={secondLocation.name} overlay='location-overlay' />
+            <Location key={thirdLocation.id} id={thirdLocation.id} name={thirdLocation.name} overlay='location-overlay-last' />
+            
             <div className='first-location'>
-                <Location key={firstLocation.id} id={firstLocation.id} name={firstLocation.name} image={venue1} overlay='location-overlay' />
+                {/* <Location key={firstLocation.id} id={firstLocation.id} name={firstLocation.name} image={venue1} overlay='location-overlay' /> */}
+                
             </div>
 
             <div className='second-location'>
-                <Location key={secondLocation.id} id={secondLocation.id} name={secondLocation.name} image={venue2} overlay='location-overlay' />
+                {/* <Location key={secondLocation.id} id={secondLocation.id} name={secondLocation.name} image={venue2} overlay='location-overlay' /> */}
+                
             </div>
 
             <div className='third-location'>
-                <Location key={thirdLocation.id} id={thirdLocation.id} name={thirdLocation.name} image={venue3} overlay='location-overlay-last' />
+                {/* <Location key={thirdLocation.id} id={thirdLocation.id} name={thirdLocation.name} image={venue3} overlay='location-overlay-last' /> */}
+                
             </div>
         </div>
     )
