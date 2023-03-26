@@ -31,6 +31,7 @@ const App = () => {
 
   return (
     <div className='app'>
+
       <header className='main-header'>
         <h1>UnityGrid Plaza</h1>
 
@@ -39,7 +40,7 @@ const App = () => {
           <Link to='/events' role='button'>Events</Link>
         </div>
       </header>
-      
+
       <main>
         {element}
       </main>
