@@ -22,6 +22,12 @@
     --h2-color: white;
     --h3-color: white;
     --card-background-color: none;
+    --form-element-background-color: white;
+    --form-element-border-color: var(--main-color);
+    --form-element-color: black;
+    --form-element-placeholder-color: black;
+    --form-element-active-border-color: var(--secondary-color);
+    --form-element-active-background-color: white;
 }
 
 #root h1, #root h2, #root h3 {
@@ -65,4 +71,8 @@
 
 #root article {
     padding: 0px;
+}
+
+#root select {
+    width: 400px;
 }

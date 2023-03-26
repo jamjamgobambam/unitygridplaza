@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from 'react'
+import LocationsAPI from '../services/LocationsAPI'
 import EventsAPI from '../services/EventsAPI'
-import LocationButtons from '../components/LocationButtons'
-import Event from '../components/Event'
-import '../css/Events.css'
-import '../css/Event.css'
+import FilteredEvents from '../components/FilteredEvents'
+import '../css/LocationFilter.css'
 
 const Events = () => {
 
+    const [locations, setLocations] = useState([])
     const [events, setEvents] = useState([])
 
     useEffect(() => {
         (async () => {
             try {
-                const eventsData = await EventsAPI.getAllEvents()
-                setEvents(eventsData)
+                const locationsData = await LocationsAPI.getAllLocations()
+                setLocations(locationsData)
             }
             catch (error) {
                 throw error
@@ -21,22 +21,54 @@ const Events = () => {
         }) ()
     }, [])
 
-    return (
-        <div className='all-events'>
-            <LocationButtons />
-
-            {
-                events && events.length > 0 ? events.map((event, index) =>
-                    <Event
-                        key={event.id}
-                        id={event.id}
-                        title={event.title}
-                        date={event.date}
-                        time={event.time}
-                        image={event.image}
-                    />
-                ) : <h2><i className="fa-regular fa-calendar-xmark fa-shake"></i> {'No events scheduled in UnityGrid Plaza yet!'}</h2>
+    useEffect(() => {
+        (async () => {
+            try {
+                getAllEvents()
             }
+            catch (error) {
+                throw error
+            }
+        }) ()
+    }, [])
+
+    const handleChange = (event) => {
+        const {name, value} = event.target
+        
+        if (value === 'all') {
+            getAllEvents()
+        }
+        else {
+            getEventsByLocation(value)
+        }
+    }
+
+    const getEventsByLocation = async (id) => {
+        const eventsData = await LocationsAPI.getEventsByLocation(id)
+        setEvents(eventsData)
+    }
+
+    const getAllEvents = async () => {
+        const eventsData = await EventsAPI.getAllEvents()
+        setEvents(eventsData)
+    }
+
+    return (
+        <div className='all-events-main'>
+            <div className='event-filters'>
+                <select onChange={handleChange}>
+                    <option value='all'>See events at . . .</option>
+                    {
+                        locations && locations.length > 0 ? locations.map((location, index) =>
+                            <option key={location.id} name={location.name} value={location.id}>{location.name}</option>
+                        ) : <option>{'No locations found in UnityGrid Plaza yet!'}</option>
+                    }
+                </select>
+
+                <button onClick={getAllEvents}>Show All Events</button>
+            </div>
+
+            <FilteredEvents data={events} />
         </div>
     )
 }
